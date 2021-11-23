@@ -1,3 +1,6 @@
+*.jar
+.mvn
+
 #Maven
 target/
 pom.xml.tag
