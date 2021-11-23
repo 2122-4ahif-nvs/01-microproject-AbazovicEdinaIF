@@ -1,0 +1,41 @@
+[plantuml, cld, png]
+
+----
+@startuml
+
+class Bus
+{
+id: Long
+brand: string
+model: string
+capacity: int
+}
+
+class Customers
+{
+id: Long
+name: string
+tour: Tour
+}
+
+class Employee
+{
+id: Long
+empNr: int
+}
+
+class Tour
+{
+id: Long
+date: DateTime
+empl: Employee
+bus: Bus
+tourR: string
+}
+
+Bus "1" -- "*" Tour
+Customers "*" --  "1" Tour
+Employee "1" -- "*" Tour
+
+@enduml
+----
